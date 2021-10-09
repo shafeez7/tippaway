@@ -1,0 +1,64 @@
+
+
+
+#t-logo{
+    position: relative;
+    bottom:10px;
+    right:9px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+#t-letters{
+    height:50px;
+    font-size: 30px;
+    
+}
+#navEach{
+    position: relative;
+    left:90px
+}
+
+#logo-name{
+    position: relative;
+    bottom:
+}
+
+
+
+
+
+
+
+
+
+
+#profileMain #followers{
+    position: relative;
+    top:35px;
+    right:60px;
+}
+#profileMain #reviews{
+    position: relative;
+    right:40px;
+}
+
+
+#profileMain .userProfile{
+    border-style: none;
+    font-family: 'Baloo Tammudu 2', Arial;
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#profileMain .list-group-item{
+    border-style: none;
+    margin-bottom: 10px;
+    font-family: 'Baloo Tammudu 2', Arial;
+    font-size: 18px;
+}
+
+#profileMain .list-group-item:hover{
+    background-color: rgb(45, 73, 80);
+    color:white;
+}

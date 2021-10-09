@@ -1,0 +1,108 @@
+body{
+    background-image: url("t-background.jpg");
+    background-size: cover;
+}
+.greetUser{
+    border:border-box;
+    width:15em;
+    margin-right: 10px;
+    font-family: 'Baloo Tammudu 2', Arial;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: rgb(98, 109, 109);
+    margin-top: 10px;
+    
+}
+
+
+
+
+#accountAlignment .nav-item{
+    box-sizing: border-box;
+    width:500px;
+    }
+
+#tLogNavv{
+    box-shadow: 0 3px 25px 0 rgb(47 56 68 / 22%);
+}
+
+
+
+
+.myText{
+    font-size: 35px;
+    font-family: 'Spartan', sans-serif;
+    color:rgb(7, 54, 54); 
+    font-weight:0px;
+
+}
+
+/* 
+rgb(4, 51, 51); 
+*/
+
+
+.loginContainer{
+    background-color: rgb(205, 211, 221);
+    box-sizing: border-box;
+    max-width: 500px;
+    border-radius: 9px;
+    margin:auto;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+
+    
+}
+
+
+
+
+
+        .loginInput1 input{
+            box-sizing: border-box;
+            margin: 3px auto;
+            margin-top: 10px;
+            margin-bottom: 1em;
+            width: 29em;
+            
+            border-style:none;
+            color:rgba(4, 51, 51);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .loginInput1 button{
+            border: border-box;
+            border-radius: 3em;
+            padding: 3px;
+            margin: 3px;
+            width:13em;
+            background-color:rgb(61, 105, 105);
+            color:white;
+            font-family: 'Baloo Tammudu 2', Arial;
+            font-size: 1.1em;
+            text-align:bottom;
+            text-align: center;
+
+
+
+            transition: background-color 0s;
+        }
+
+        .loginInput1 button:hover{
+            background-color:rgb(112, 122, 122);
+            color:white;
+            padding:4px;
+
+
+}
+
+.tSignUpContainer{
+    background-color: rgb(205, 211, 221);
+    padding:14px;
+    color:rgb(27, 55, 78);
+}
+
+

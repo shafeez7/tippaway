@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In/Sign Up!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="t.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Berkshire+Swash&family=Righteous&family=Spartan:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+
+</head>
+<body>
+
+            <div class="alert alert-success alert-dismissible fade show mb-0 " role="alert">
+                You have successfully Logged In!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+            </div>
+
+<nav id="tNav" class=" container-fluid navbar navbar-expand-xxxl navbar-light sticky-top bg-light" >
+    
+        <div id="nav-log-t" class="nav-item ">
+            <a class="navbar-brand" href="t.html">
+                <!--CHANGE TIPAWAY LOGO TO MOR CLEAR CONSTUCT IMAGE-->
+                <img src="Screen Shot 2021-03-23 at 6.32.37 PM.png" alt="tipaway 't' logo" width="90px" height="100px"
+                    class="mb-4">
+                <span id="tipawayLetters" class="tipaway d-inline ">tipaway</span>
+
+            </a>
+
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mx-5  mt-3  mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="t.html">Home</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Send & Recieve Tips
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-item">
+                    <a id="" class="nav-link " href="profile.html">Profile</a>
+                </li>
+            </ul>
+
+            <ul id="accountAlignment" class="navbar-nav ">
+
+                <li id="account" class="nav-item  dropdown ">
+                    <div class="accountContainer ">
+                        <div class="accountItem">
+                            <img id="blankUserImg" src="propic.png" width="55px" height="" alt="profileblankpic">
+                        </div>
+                        <a class="nav-link dropdown-toggle accTxtLog mt-2" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="greetUser ">ACCOUNT</span>
+                        </a>
+                        <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item " href="loginpage.html">Log In</a></li>
+                            <li><a class="dropdown-item" href="loginpage.html">Register Now</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Learn more</a></li>
+                            <li> <button id="themeBtn">Change theme</button>
+                            </li>
+
+                        </ul>
+                    
+                </li>
+            </div>
+
+            </ul>
+            <!-- <section id="butContainer" >
+        <div class="nav-item ">
+            <a id="logInBtn" class="btn btn-secondary pt-2 log-in-button" href="loginpage.html" role="button">Log In</a>
+        </div>
+        
+        <div class="nav-item "> 
+            <a id="signUpBtn" class="btn btn-secondary pt-2 sign-up-button" href="loginpage.html" role="button">Sign Up</a>
+        </div>
+       
+        <div class="nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+      </div>
+        </section> -->
+            <!--search on nav bar, i am disabling it so i can put a log in and sign up button 
+         <form class="d-flex m-5 p-0">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn " type="submit">
+              
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="16" fill="currentColor" class="bi bi-search mx-1" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>  
+        </button>
+    </form>
+-->
+
+
+
+            </div>
+        
+    </nav>
+
+
+
+    <section class=" mt-3 d-flex  align-items-center justify-content-center" id="discover  ">
+        
+        <div class="m-auto w-75 mt-2">
+            <form class="" action="https://www.google.com/search">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                            <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                            </svg>
+                    </span>
+                    <input type="text" name="q" class="form-control" placeholder="Discover" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+            </form>
+        </div>
+        
+        <div class="mx-5">
+            <a class="mx-3" href="t.html">Home</a>
+            <a href="loginpage.html">Log Out</a>
+        </div>
+        
+
+    
+</section>
+    
+
+
+
+<section id="profileBody" class="container">
+
+
+
+
+
+
+
+
+
+
+    <div class="row mt-5">
+
+
+
+        <div class="col-3 border-end">
+            <h2> Services you Provide</h2>
+
+            <!-- to search, Where your information will be sent is controled by action, paste url and follow patter of url showing q="your search" https://www.google.com/search-->
+    
+            <form action="https://www.google.com/search">
+                <!--action is where you wanna send data-->
+    
+                <input type="text" name="q" placeholder="google search">
+                <!--q is the content u search on original gooogle.com/search/q=color here -->
+    
+                <button id="formbutton">search</button>
+    
+            </form>
+    
+            <form action="https://www.youtube.com/results">
+                <!--https://www.youtube.com/results?search_query=kyrie match <input name=___-->
+                <input type="text" name="search_query" placeholder="youtube search">
+                <button id="formbutton"> search </button>
+    
+            </form>
+
+
+            <h6 class="display-6 text-center"><b>MY SKILLS    ${(#)}</b></h6>
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Accordion Item #1
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                  </div>
+                </div>
+                
+                
+                
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Accordion Item #2
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+                
+                
+                
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Accordion Item #3
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+
+
+
+                
+              
+            
+            
+            
+            
+            
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="col-6  mt-2 ">
+                            <div class="text-center">
+                                <h3 id="username"><b>WELCOME</b> ${username123} <b>!</b></h3>
+                            </div>
+
+
+                            <div class="d-flex  align-items-center mx-1">
+                                <div class="d-flex">
+                                    <div><img id="profileImg" src="propic.png" class="rounded-circle" width="350px" alt="..."></div>
+                                    <div id="addImgIcon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                            fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                                    </svg> </div>
+                                             </div>
+
+                                                <div class="">
+                                                    <h6>Followers</h6>
+                                                    <p class="text-center">17<b>M</b></p>
+                                                      </div>
+                                                    <div>                                                   
+                                                        <h6 class="mx-3">Following</h6>
+                                                        <p class="text-center">100</p>
+                                                     </div>
+
+                             </div>
+
+                            <h5 id="userFullName">${firstName} ${Last}, ${age}</h5>
+                            <p id="userBio">${bio} about user max will be around 120-200charaters long</p>
+
+
+
+
+            <br>
+            
+
+
+
+
+                                <h3 class="text-center">USER HOME FEED</h3>
+                                        <div class="list-group">
+
+                                                    <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                            <h5 id="requestAppend"class="mb-1">List group item heading</h5>
+
+                                                            <small>3 days ago</small>
+                                                        </div>
+                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                                        <small id="amount">And some small print.</small>
+
+                                                    </a>
+
+
+
+
+                                                    <a href="#" class="list-group-item list-group-item-action">
+
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                            <h5 class="mb-1">List group item heading</h5>
+
+                                                            <small class="text-muted">3 days ago</small>
+                                                        </div>
+                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                                        <small class="text-muted">And some muted small print.</small>
+
+                                                    </a>
+
+
+
+
+
+                                                    <a href="#" class="list-group-item list-group-item-action">
+
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                            <h5 class="mb-1">List group item heading</h5>
+
+                                                            <small class="text-muted">3 days ago</small>
+                                                        </div>
+                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                                        <small class="text-muted">And some muted small print.</small>
+
+
+                                                    </a>
+
+
+
+
+
+
+
+                                                    <a href="#" class="list-group-item list-group-item-action">
+
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                            <h5 class="mb-1">List group item heading</h5>
+
+                                                            <small class="text-muted">3 days ago</small>
+                                                        </div>
+                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                                        <small class="text-muted">And some muted small print.</small>
+
+
+                                                    </a>
+
+
+
+
+
+
+                                                    <a href="#" class="list-group-item list-group-item-action">
+
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                            <h5 class="mb-1">List group item heading</h5>
+
+                                                            <small class="text-muted">3 days ago</small>
+                                                        </div>
+                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                                        <small class="text-muted">And some muted small print.</small>
+
+
+                                                    </a>
+
+
+
+
+
+
+
+
+                                                    <a href="#" class="list-group-item list-group-item-action">
+
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                            <h5 class="mb-1">List group item heading</h5>
+
+                                                            <small class="text-muted">3 days ago</small>
+                                                        </div>
+                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                                        <small class="text-muted">And some muted small print.</small>
+
+
+                                                    </a>
+
+
+
+
+
+                                                    <a href="#" class="list-group-item list-group-item-action">
+
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                            <h5 class="mb-1">List group item heading</h5>
+
+                                                            <small class="text-muted">3 days ago</small>
+                                                        </div>
+                                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                                        <small class="text-muted">And some muted small print.</small>
+
+
+                                                    </a>
+
+
+                                                </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-3 mt- border-start bg-dark">
+
+            <!-- Button trigger modal -->
+        <div class="mt-2">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                edit Profile </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Edit tipaway Profile</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                
+                                                <form id="editProfile">
+
+                                                                    <div>
+                                                                        <h4 class="display-6">Edit Profile picture</h4>
+                                                                    </div>
+
+                                                                    <div class="input-group mb-3">
+                                                                        <label for="profilePic" class="input-group-text"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                                                fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                                                                                <path
+                                                                                    d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+                                                                                <path
+                                                                                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                                                            </svg></label>
+                                                                        <input type="file" class="form-control" name="profilePic" profilePic">
+                                                                    </div>
+
+
+
+                                                                    <div>
+                                                                        <h3 class="mt-5  display-6">User Info</h3>
+                                                                    </div>
+
+                                                                    <div class="mb-3 input-group flex-nowrap">
+                                                                        <span class="input-group-text" id="addon-wrapping">@</span>
+                                                                        <input type="text" name="username" class="form-control"
+                                                                            placeholder="Confirm Username" aria-label="Username"
+                                                                            aria-describedby="addon-wrapping" required>
+                                                                    </div>
+
+
+                                                                    <div class="mb-5 input-group">
+                                                                        <span class="input-group-text">First and last name</span>
+                                                                        <input name="userFirstName" type="text" aria-label="First name" placeholder="First"
+                                                                            class="form-control" required>
+                                                                        <input name="userLastName" type="text" aria-label="Last name" placeholder="Last"
+                                                                            class="form-control" required>
+                                                                    </div>
+
+
+
+                                                                    <section class="d-flex justify-content-around">
+                                                                        <div class="mb-3">
+                                                                            <label for="userPhone" class="form-label">Phone Number</label>
+                                                                            <input type="tel" name="userPhone" class=" form-control" id="phone"
+                                                                                placeholder="(703)-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                                                        </div>
+
+                                                                        <div class="mb-3">
+                                                                            <label for="userEmail" class="form-label">Confirm Email address</label>
+                                                                            <input type="email" name="userEmail" class="form-control" id=""
+                                                                                placeholder="name@example.com">
+                                                                        </div>
+                                                                    </section>
+
+
+
+                                                                    <div class="mb-3">
+                                                                        <label for="userBio" class="form-label">Edit Bio</label>
+                                                                        <textarea name="userBio" class="form-control" id="userBio"
+                                                                            rows="3">tell us about yourself...</textarea>
+                                                                    </div>
+
+
+
+                                                                    <div class="mb-3 input-group flex-nowrap">
+                                                                        <span class="input-group-text" id="addon-wrapping"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                                                fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                                                                <path
+                                                                                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                                                                            </svg></span>
+                                                                        <input type="text" name="userLocation" class="form-control"
+                                                                            placeholder="Current, City" aria-label="City" aria-describedby="addon-wrapping">
+                                                                    </div>
+
+
+
+                                                                    <div class="mb-3">
+                                                                        <label for="currentEmply" class="form-label">Current/Last employment</label>
+                                                                        <input type="text" name="currentEmply" class="form-control" id=""
+                                                                            placeholder="Job Title">
+
+                                                                        <div id="textHelp" class="form-text">NOTE: If you are a current Student, enter
+                                                                            'Student' as title entry</div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="mb-3 ">
+                                                                        <label class="form-label" for="userAge">Confirm Age</label>
+                                                                        <input type="number" name="userAge" class="form-input" id="" required>
+                                                                    </div>
+
+
+                                                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+
+                                                                </form>
+
+                                                            </div>
+                                    
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Update</button>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            
+           
+            
+            
+         
+                                
+                                <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#requestBtn">
+                        Request tipper
+                    </button>
+                    
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="requestBtn" tabindex="-1" aria-labelledby="requestLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="requestLabel">Request Tipper</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                
+                                                <div class="modal-body">
+                                                <form id="requestForm" action="" method="">
+                                                    
+                                                                <label for="tipperCategory" class="form-label">Select tipper Service</label>
+                                                                <select id="tipperCategory" class="form-control" name="tipperCategory">
+                                                                    <option value="" selected>--select service below--</option>
+                                                                    <option value="">Personal Care</option>
+                                                                    <option value="">ChildCare</option>
+                                                                    <option value="">Electronic/Technology Support</option>
+                                                                    <option value="">Yard Care</option>
+                                                                    <option value="">Household</option>
+                                                                    <option value="">Educational</option>
+                                                                    <option value="">Auto</option>
+                                                                    <option value="">specific</option>
+
+                                                                </select>
+
+
+                                                        
+                                                                <label for="radius" clas="form-label">Within (local-radius)</label>
+                                                                <input type="number" class="form-control" id="radiusNumber" name="radius" placeholder="miles">
+
+
+
+                                                                <div class="mb-3 input-group flex-nowrap">
+                                                                    <span class="input-group-text" id="addon-wrapping">$</span>
+                                                                    <input type="number" name="tipAmount" class="form-control"
+                                                                        placeholder="Tip Amount" aria-label="tipAmount"
+                                                                        aria-describedby="addon-wrapping" required>
+                                                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                <button class='btn  btn-success'>Save</button>
+
+
+
+
+
+                                                </form>
+                                                
+
+                                            
+                                            
+                                            </div>
+                                                <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+         </div>         
+                    
+
+        
+
+<!--wallet card-->
+            <section id="wallet">
+                <div class="card m-5" >
+                <img src="wallet1.png" class="card-img-top" alt="...">
+                
+                <div class="card-body">
+                 <div><h3 class="card-title ">tipaway Wallet</h3></div> 
+                 <div></div> <p class="card-text mt-2">Balance: ${ $20.92 }</p>
+                </div>
+
+
+
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body d-flex">
+                 <div><a href="#" class="card-link">Add to Balance</a></div>
+                 <div> <a href="#" class="card-link">Transfer to Bank</a></div>
+                </div>
+              </div>
+
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+     
+     
+    </div>
+
+    
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+        crossorigin="anonymous"></script>
+    <script src="t-profile.js"> </script>
+
+
+</body>
+
+</html>
